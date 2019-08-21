@@ -1,5 +1,5 @@
 # hello-hostame-s2i
-FROM openshift/base-centos7
+FROM docker.io/node
 
 # TODO: Put the maintainer name in the image metadata
 # LABEL maintainer="Your Name <your@email.com>"
@@ -15,8 +15,8 @@ FROM openshift/base-centos7
 
 # TODO: Install required packages here:
 # RUN yum install -y ... && yum clean all -y
-RUN yum install -y rubygems && yum clean all -y
-RUN gem install asdf
+RUN yum install -y git clone https://github.com/madaferva/hello-hostame-s2i
+RUN cd hello-hostname-s2i
 
 # TODO (optional): Copy the builder files into /opt/app-root
 # COPY ./<builder_folder>/ /opt/app-root/
@@ -29,10 +29,10 @@ COPY ./s2i/bin/ /usr/libexec/s2i
 # RUN chown -R 1001:1001 /opt/app-root
 
 # This default user is created in the openshift/base-centos7 image
-USER 1001
+#USER 1001
 
 # TODO: Set the default port for applications built using this image
-# EXPOSE 8080
+EXPOSE 8080
 
 # TODO: Set the default CMD for the image
-# CMD ["/usr/libexec/s2i/usage"]
+#CMD ["/usr/libexec/s2i/usage"]
