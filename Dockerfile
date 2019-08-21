@@ -16,7 +16,7 @@ FROM docker.io/node
 # TODO: Install required packages here:
 # RUN yum install -y ... && yum clean all -y
 RUN git clone https://github.com/madaferva/hello-hostame-s2i.git
-RUN cd hello-hostname-s2i
+RUN cd hello-hostame-s2i
 
 # TODO (optional): Copy the builder files into /opt/app-root
 # COPY ./<builder_folder>/ /opt/app-root/
