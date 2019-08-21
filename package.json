@@ -1,0 +1,23 @@
+{
+  "name": "hello-hostname",
+  "version": "0.0.1",
+  "description": "Hello-hostname node.js sample",
+  "main": "server.js",
+  "dependencies": {
+  },
+  "engine": {
+    "node": "*",
+    "npm": "*"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/madaferva/hello-hostame"
+  },
+  "author": "David Fernandez <davidfv@gmail.com",
+  "license": "CC-BY-1.0",
+
+  "homepage": "https://github.com/madaferva/hello-hostame"
+}
